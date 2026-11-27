@@ -1,0 +1,6 @@
+item,quantity,unit,rate,total,offered_spec,status
+Cement,200,Bags,380,76000,OPC 53 grade,included
+TMT Steel,10000,KG,65,650000,Fe500D,included
+Sand,100,Tons,1200,120000,,included
+Scaffolding,1,Lot,80000,80000,,included
+Ready Mix Concrete,50,Cum,5500,275000,M25,included
