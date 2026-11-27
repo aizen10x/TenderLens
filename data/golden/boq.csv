@@ -1,0 +1,6 @@
+item_no,item,quantity,unit,required_spec,mandatory
+1,Cement,200,Bags,OPC 53 grade,yes
+2,TMT Steel,10000,KG,Fe500D,yes
+3,Sand,100,Tons,,no
+4,Scaffolding,1,Lot,,no
+5,Ready Mix Concrete,50,Cum,M25,yes
