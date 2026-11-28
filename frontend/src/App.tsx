@@ -4,10 +4,14 @@ export default function App() {
   const [msg, setMsg] = useState("Checking backend...");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/health")
-      .then((r) => r.json())
-      .then((d) => setMsg("Backend says: " + d.status))
-      .catch(() => setMsg("Backend not reachable"));
+    fetch("/health")
+      .then(async (r) => {
+        const text = await r.text();
+        if (!r.ok) throw new Error("HTTP " + r.status + ": " + text);
+        const d = JSON.parse(text);
+        setMsg("Backend says: " + (d.status ?? text));
+      })
+      .catch((e) => setMsg("Backend not reachable: " + String(e)));
   }, []);
 
   return (
